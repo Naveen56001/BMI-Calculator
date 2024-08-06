@@ -5,7 +5,7 @@ import {useMemo} from 'react';
 function App() {
 
   const [weight, setWeight] = useState(40);
-  const [height, setHeight] = useState(0);
+  const [height, setHeight] = useState(80);
 
   const output = useMemo(() => {
     return ((weight / (height * height)) * 10000).toFixed(1);
@@ -24,10 +24,9 @@ function App() {
         onChange={(e) => setWeight(e.target.value)}/>
         <p className="slider-output">Height: {height} cm</p>
         <input className='input-slider'
-        
         type='range'
         step='1'
-        min='40'
+        min='80'
         max='300'
         onChange={(e) => setHeight(e.target.value)}/>
       </div>
